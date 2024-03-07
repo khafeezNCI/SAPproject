@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <link rel="stylesheet" href='/static/css/main.css' />    
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="{{ url_for('index') }}">FlaskApp</a>
+      <a href="{{ url_for('users') }}">User</a>
+      <a href="{{ url_for('xss') }}">XSS Example</a>
+      {% if isIndex %}
+      <a href="{{ url_for('logout') }}">Logout</a>          
+      {% else %}
+      <a href="{{ url_for('do_admin_login') }}">Login</a>      
+      {% endif %}    
+    </nav>
+    <hr />
+    <div class="content">{% block content %} {% endblock %}</div>    
+  </body>
+</html>

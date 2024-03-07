@@ -1,0 +1,47 @@
+nav a {
+    color: #d64161;
+    font-size: 3em;
+    margin-left: 50px;
+    text-decoration: none;
+}
+.login-form {
+    text-align: center;
+}
+.control-group {
+    margin-bottom: 10px;
+}
+input {
+    text-align: center;
+    background-color: #65d0eb;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 500px;
+    transition: border .5s;
+}
+        
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+
+table,th,td {
+    border: 1px solid;
+}
+.table {
+    background-color: aqua;
+    margin:1 rem;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table__header {
+    text-align: center;
+
+}
+.table__cell {
+    padding: 10px;
+}

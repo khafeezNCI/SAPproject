@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="login-form">
+  <h1>{% block title %} XSS Example {% endblock %}</h1>
+  <h3>{{ data | safe }}</h3>
+  <form action="/xss" method="POST">
+    <div class="control-group">
+      <input
+        type="text"
+        class="login-field"
+        value=""
+        placeholder=" name or xss script "
+        name="xssname"
+        autocomplete="off"
+      />
+      <label class="login-field-icon fui-user" for="login-name"></label>
+    </div>
+    <input
+      type="submit"
+      value="Search"
+      class="btn btn-primary btn-large btn-block"
+    />
+  </form>
+  <br />
+  <br />
+  <p>add the following to URL <i>xss?name=admin</i></p>
+  <a href="/xss?name=admin">xss dom attack</a>
+  <p>
+    DOM based add the following to the url
+    <i>xss?name=&lt;script&gt;alert();&lt;/script&gt;</i>
+  </p>
+  {% endblock %}
+</div>

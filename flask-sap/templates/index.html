@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} This is the Home Page {% endblock %}</h1>
+<h1>Web Application running {{ utc_dt }}</h1>
+{% if isIndex %}
+<h1>Sensitive data here</h1>
+
+{% else %}
+<h1>You need to be logged in to see this</h1>
+
+{% endif %} {% endblock %}

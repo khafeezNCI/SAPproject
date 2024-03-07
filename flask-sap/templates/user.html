@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="login-form">
+  <h1>{% block title %} Search for User {% endblock %}</h1>
+  <h3>{{ data | safe }}</h3>
+  <form action="/users" method="POST">
+    <div class="control-group">
+      <input
+        type="text"
+        class="login-field"
+        value=""
+        placeholder="User Name"
+        name="username"
+        autocomplete="off"
+      />
+      <label class="login-field-icon fui-user" for="login-name"></label>
+    </div>
+
+    <input
+      type="submit"
+      value="Search"
+      class="btn btn-primary btn-large btn-block"
+    />
+  </form>
+  <br />
+  <br />
+
+  {% endblock %}
+</div>

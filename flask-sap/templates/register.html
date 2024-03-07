@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+<div class="login-form">
+  <h1>{% block title %} Register New User{% endblock %}</h1>
+  <h3>{{ data | safe }}</h3>
+  <form action="/register" method="POST">
+    <div class="control-group">
+      <input
+        type="text"
+        class="login-field"
+        value=""
+        placeholder="username"
+        name="username"
+        autocomplete="off"
+      />
+      <label class="login-field-icon fui-user" for="login-name"></label>
+    </div>
+    <div class="control-group">
+      <input
+        type="text"
+        class="login-field"
+        value=""
+        placeholder="user email"
+        name="email"
+        autocomplete="off"
+      />
+      <label class="login-field-icon fui-user" for="login-name"></label>
+    </div>
+    <div class="control-group">
+      <input
+        type="password"
+        class="login-field"
+        value=""
+        placeholder="password"
+        name="password"
+        autocomplete="off"
+      />
+      <label class="login-field-icon fui-lock" for="login-pass"></label>
+    </div>
+    <input
+      type="submit"
+      value="Create User"
+      class="btn btn-primary btn-large btn-block"
+    />
+  </form>
+</div>
+{% endblock %}
